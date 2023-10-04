@@ -2,19 +2,19 @@
 
 ## cd - change directory
 
-# Using cd with no arguments
+### Using cd with no arguments
 ```
 [user@sahara ~]$ cd
 [user@sahara ~]$
 ```
 
-# Using cd with a path to a directory as an argument
+### Using cd with a path to a directory as an argument
 ```
 [user@sahara ~]$ cd lecture1/
 [user@sahara ~/lecture1]$
 ```
 
-# Using cd with a path to a file as an argument
+### Using cd with a path to a file as an argument
 ```
 [user@sahara ~/lecture1/messages]$ cd en-us.txt 
 bash: cd: en-us.txt: Not a directory
@@ -27,11 +27,11 @@ bash: cd: en-us.txt: Not a directory
 
 ## ls - lists contents of files and directories
 
-# Using ls with no arguments
+### Using ls with no arguments
 
-# Using ls with a path to a directory as an argument
+### Using ls with a path to a directory as an argument
 
-# Using ls with a path to a file as an argument
+### Using ls with a path to a file as an argument
 
 * A screenshot or Markdown code block showing the command and its output
 * What the working directory was when the command was run
@@ -40,11 +40,11 @@ bash: cd: en-us.txt: Not a directory
 
 ## cat - reads data from a file and gives its content as output
 
-# Using cat with no arguments
+### Using cat with no arguments
 
-# Using cat with a path to a directory as an argument
+### Using cat with a path to a directory as an argument
 
-# Using cat with a path to a file as an argument
+### Using cat with a path to a file as an argument
 
 * A screenshot or Markdown code block showing the command and its output
 * What the working directory was when the command was run
