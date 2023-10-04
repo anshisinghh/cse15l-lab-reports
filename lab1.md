@@ -82,7 +82,7 @@ Another line
 ```
 
 When the command was run the working directory was ‘/home/user’.
-When *cat* is used with no arguments, it expects input from the user. I inputted “Hello! Testing input” which was then displayed back to me, same with the next line that I imputed “Another line”. Then I used ‘Ctrl+C’ to exit out of the command.
+When *cat* is used with no arguments, it expects input from the user. I inputted “Hello! Testing input” which was then displayed back to me, same with the next line that I inputted “Another line”. Then I used ‘Ctrl+C’ to exit out of the command.
 
 ### Using *cat* with a path to a directory as an argument
 ```
