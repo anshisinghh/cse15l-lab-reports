@@ -28,7 +28,7 @@ bash: cd: en-us.txt: Not a directory
 ```
 
 When the command was run the working directory was ‘/home/lecture1/messages’.
-When *cd* is used with a path to a file as an argument, it tries to change the working directory to that file. However, *cd* only changes to a working directory, since en-us.txt is a file not a directory, the error message “Not a directory” popped up and the *cd* command was not executed.
+When *cd* is used with a path to a file as an argument, it tries to change the working directory to that file. However, *cd* only changes to a working directory, since en-us.txt is a file, not a directory, the error message “Not a directory” popped up and the *cd* command was not executed.
 
 
 ## *ls* - lists contents of files and directories 
@@ -50,7 +50,7 @@ Hello.class  Hello.java  messages  README
 ```
 
 When the command was run the working directory was ‘/home’.
-When *ls* is used with a path to a directory as an argument it lists the contents of that directory. The directory ‘lecture1’ has the files ‘Hello.class’, ‘Hello.java’, ‘messages’, and ‘README’, which gets printed out.
+When *ls* is used with a path to a directory as an argument it lists the contents of that directory. The directory ‘lecture1’ has the contents ‘Hello.class’, ‘Hello.java’, ‘messages’, and ‘README’, which gets printed out.
 
 ### Using *ls* with a path to a file as an argument
 ```
