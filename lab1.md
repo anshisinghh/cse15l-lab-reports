@@ -30,6 +30,7 @@ bash: cd: en-us.txt: Not a directory
 When the command was run the working directory was ‘/home/user/lecture1/messages’.
 When *cd* is used with a path to a file as an argument, it tries to change the working directory to that file. However, *cd* only changes to a working directory, since en-us.txt is a file not a directory, the error message “Not a directory” popped up and the *cd* command was not executed.
 
+
 ## *ls* - lists contents of files and directories 
 
 ### Using *ls* with no arguments
@@ -65,6 +66,7 @@ ls: cannot access 'fr-ca.txt': No such file or directory
 
 When the command was run the working directory was ‘/home/user/lecture1/messages’.
 When *ls* is used with a path to a file as an argument, it lists the specified file if it exists in the path. Since ‘en-us.txt’ exists, it prints out the file name, however, since the file ‘fr-ca.txt’ does not exist the error message “No such file or directory” pops up.	
+
 
 ## *cat* - reads data from a file and gives its content as output
 
