@@ -28,10 +28,16 @@ bash: cd: en-us.txt: Not a directory
 ## ls - lists contents of files and directories
 
 ### Using ls with no arguments
+```
+```
 
 ### Using ls with a path to a directory as an argument
+```
+```
 
 ### Using ls with a path to a file as an argument
+```
+```
 
 * A screenshot or Markdown code block showing the command and its output
 * What the working directory was when the command was run
@@ -41,10 +47,16 @@ bash: cd: en-us.txt: Not a directory
 ## cat - reads data from a file and gives its content as output
 
 ### Using cat with no arguments
+```
+```
 
 ### Using cat with a path to a directory as an argument
+```
+```
 
 ### Using cat with a path to a file as an argument
+```
+```
 
 * A screenshot or Markdown code block showing the command and its output
 * What the working directory was when the command was run
