@@ -2,12 +2,8 @@ import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
 
-interface URLHandler {
-    String handleRequest(URI url);
-}
-
 class Handler implements URLHandler {
-    private final ArrayList<String> queries = new ArrayList<>();
+    ArrayList<String> queries = new ArrayList<>();
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
@@ -34,7 +30,7 @@ class Handler implements URLHandler {
     }
 }
 
-public class SearchEngine {
+class SearchEngine {
     public static void main(String[] args) throws IOException {
         if (args.length == 0) {
             System.out.println("Missing port number! Try any number between 1024 to 49151");
