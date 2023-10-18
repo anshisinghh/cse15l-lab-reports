@@ -43,7 +43,9 @@ class StringServer {
 ```
 
 ### /add-message
-
+[]!(hello.png)
+[]!(bye.png)
+[]!(add-message.png)
 
 ## Part 2
 
