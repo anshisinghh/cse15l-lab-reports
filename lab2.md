@@ -1,6 +1,8 @@
 # Lab Report 2 - Servers and SSH Keys
 
 ## Part 1
+
+### StringServer.java
 ```
 import java.io.IOException;
 import java.net.URI;
@@ -39,6 +41,9 @@ class StringServer {
     }
 }
 ```
+
+### /add-message
+
 
 ## Part 2
 
