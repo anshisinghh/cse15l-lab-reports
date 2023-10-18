@@ -38,7 +38,6 @@ class StringServer {
         Server.start(port, new Handler());
     }
 }
-
 ```
 
 ## Part 2
