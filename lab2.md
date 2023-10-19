@@ -44,9 +44,28 @@ class StringServer {
 
 ### /add-message
 ![](hello.png)
+Which methods in your code are called?
+What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+
 ![](bye.png)
+Which methods in your code are called?
+What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+
 ![](add-message.png)
 
 ## Part 2
 
+### Path to the private key for your SSH key for logging into ieng6 
+
+### Path to the public key for your SSH key for logging into ieng6 
+
+### Terminal interaction where you log into ieng6 with your course-specific account without being asked for a password
+
 ## Part 3
+
+Something that I learned during week 2 and 3 that I did not before was
+    - how to handle URLs/ different parts of them
+    - i didnt know we could acccess servers on different computers (ssh)
+    
