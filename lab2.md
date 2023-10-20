@@ -49,7 +49,7 @@ The methods that are being called is handleRequest(URI url) in the class Handler
 
 ### "/"
 ![](add-message.png)
-If the url object is being called without a path, meaning if the root URL is called ("/"). The handleRequest accesses the queries ArrayList and prints out the queries by splitting each entry into two parts, index and message, and concatenating them with a period and a space, followed by a newline character. The displayed content is dynamic and changes in response to messages added using the "/add-message" path. As new messages are added using the "/add-message" link, it appends to the queries ArrayList. The list of messages saved in queries is dynamically generated when the root URL is called.
+If the url object is being called without a path, meaning if the root URL is called ("/"). The handleRequest accesses the queries ArrayList and prints out the queries by splitting each entry into two parts, index and message, and concatenating them with a space, followed by a newline character. The displayed content is dynamic and changes in response to messages added using the "/add-message" path. Each time the root URL is called, the list of messages saved in the queries ArrayList is dynamically generated.
 
 ## Part 2
 
