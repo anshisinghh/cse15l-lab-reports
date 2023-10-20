@@ -42,12 +42,12 @@ class StringServer {
 }
 ```
 
-### "/add-message"
+### /add-message
 ![](hello.png)
 ![](bye.png)
 The methods that are being called is handleRequest(URI url) in the class Handler. The relevant arguments to the handleRequest method is the URI object representing the input URL. For this example, the url object represents the URL (".../add-message?s=hello") and (".../add-message?s=bye"). We created an ArrayList called queries, that stores the messages. The handleRequest accesses the queries ArrayList and modifies it. The input message "hello" and "bye" are extracted from the URL and is added to the queries ArrayList as a numbered entry, thus the queries ArrayList is now queries = ["1.hello", "2.bye"]. If more requests are made, the list will grow accordingly and additional messages will be added to the queries ArrayList.
 
-### "/"
+### /
 ![](add-message.png)
 If the url object is being called without a path, meaning if the root URL is called ("/"). The handleRequest accesses the queries ArrayList and prints out the queries by splitting each entry into two parts, index and message, and concatenating them with a period and a space, followed by a newline character. The displayed content is dynamic and changes in response to messages added using the "/add-message" path. As new messages are added using the "/add-message" link, it appends to the queries ArrayList. The list of messages saved in queries is dynamically generated when the root URL is called.
 
