@@ -15,15 +15,21 @@ class Handler implements URLHandler {
         if (url.getPath().equals("/")) {
             String printing = "";
             for (int i = 0; i < queries.size(); i++) {  
-                String[] parameters = queries.get(i).split("\\.");  
-                printing += parameters[0] + ". " + parameters[1] + "\n";
+                String[] words = queries.get(i).split("\\.");  
+                printing += words[0] + ". " + words[1] + "\n";
             }
             return String.format(printing);
-        } else if (url.getPath().equals("/add-message")) {
+        } else if (url.getPath().equals("/add-message") && url.getQuery().startsWith("s")) {
             String[] parameters = url.getQuery().split("=");
             String query = Integer.toString(queries.size() + 1) + "." + parameters[1];
             queries.add(query);
-            return String.format("Added: %s", parameters[1]);
+
+            String printing = "";
+            for (int i = 0; i < queries.size(); i++) {  
+                String[] words = queries.get(i).split("\\.");  
+                printing += words[0] + ". " + words[1] + "\n";
+            }
+            return String.format(printing);
         }
         return "404 Not Found!";
     }
@@ -40,9 +46,10 @@ class StringServer {
         Server.start(port, new Handler());
     }
 }
+
 ```
 
-### "/add-message"
+### "/add-message?s="
 ![](hello.png)
 ![](bye.png)
 The methods that are being called is handleRequest(URI url) in the class Handler. The relevant arguments to the handleRequest method is the URI object representing the input URL. For this example, the url object represents the URL (".../add-message?s=hello") and (".../add-message?s=bye"). We created an ArrayList called queries, that stores the messages. The handleRequest accesses the queries ArrayList and modifies it. The input message "hello" and "bye" are extracted from the URL and is added to the queries ArrayList as a numbered entry, thus the queries ArrayList is now queries = ["1.hello", "2.bye"]. If more requests are made, the list will grow accordingly and additional messages will be added to the queries ArrayList.
