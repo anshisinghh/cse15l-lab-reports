@@ -60,38 +60,12 @@ If the url object is being called without a path, meaning if the root URL is cal
 
 ## Part 2
 ![](sshkey.png)
-```
-atwins@MacBook-Air-8 ~ % ssh-keygen 
-Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/atwins/.ssh/id_rsa): 
-/Users/atwins/.ssh/id_rsa already exists.
-Overwrite (y/n)? y
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
-Your identification has been saved in /Users/atwins/.ssh/id_rsa
-Your public key has been saved in /Users/atwins/.ssh/id_rsa.pub
-The key fingerprint is:
-SHA256:B9o6j9AfPJFCbjB7M6ufnSpnOMCYq0wnTRPS+4Xd1Oc atwins@MacBook-Air-8.local
-The key's randomart image is:
-+---[RSA 3072]----+
-|                 |
-|  .       .      |
-| . oo . .. . .   |
-|  . o*oooo  o    |
-| + +..OoS..  E   |
-|o = o+.B o       |
-| + +.o= +        |
-|+ o +ooB +       |
-|o.  .*=.=        |
-+----[SHA256]-----+
-atwins@MacBook-Air-8 ~ % 
-```
 
 ### Path to the private key for your SSH key for logging into ieng6 (on your computer)
-The path to the private key is /Users/atwins/.ssh/id_rsa.
+The path to the private key is /Users/atwins/.ssh/id_rsa, as shown above.
 
 ### Path to the public key for your SSH key for logging into ieng6 (within your account on ieng6)
-The path to the public key is /Users/atwins/.ssh/id_rsa.pub.
+The path to the public key is /Users/atwins/.ssh/id_rsa.pub, as shown above.
 
 ### Terminal interaction where you log into ieng6 with your course-specific account without being asked for a password
 ```
