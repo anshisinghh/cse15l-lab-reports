@@ -62,10 +62,12 @@ If the url object is being called without a path, meaning if the root URL is cal
 ![](gettingsshkey.png)
 
 ### Path to the private key for your SSH key for logging into ieng6 (on your computer)
-The path to the private key is /Users/atwins/.ssh/id_rsa, as shown above.
+![](privatekey.png)
+The path to the private key is /Users/atwins/.ssh/id_rsa.
 
 ### Path to the public key for your SSH key for logging into ieng6 (within your account on ieng6)
-The path to the public key is /Users/atwins/.ssh/id_rsa.pub, as shown above.
+![](publickey.png)
+The path to the public key is /Users/atwins/.ssh/id_rsa.pub.
 
 ### Terminal interaction where you log into ieng6 with your course-specific account without being asked for a password
 ![](terminalinteraction.png)
