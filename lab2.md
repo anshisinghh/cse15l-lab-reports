@@ -51,7 +51,7 @@ class StringServer {
 
 ### "/add-message?s="
 ![](addinghello.png)
-![](addingbye.png)
+![](addinghbye.png)
 The methods that are being called is handleRequest(URI url) in the class Handler. The relevant arguments to the handleRequest method is the URI object representing the input URL. For this example, the url object represents the URL (".../add-message?s=hello") and (".../add-message?s=bye"). We created an ArrayList called queries, that stores the messages. The handleRequest accesses the queries ArrayList and modifies it. The input message "hello" and "bye" are extracted from the URL and is added to the queries ArrayList as a numbered entry, thus the queries ArrayList is now queries = ["1.hello", "2.bye"]. If more requests are made, the list will grow accordingly and additional messages will be added to the queries ArrayList.
 
 ### "/"
