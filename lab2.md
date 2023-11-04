@@ -59,7 +59,7 @@ The methods that are being called is handleRequest(URI url) in the class Handler
 If the url object is being called without a path, meaning if the root URL is called ("/"). The handleRequest accesses the queries ArrayList and prints out the queries by splitting each entry into two parts, index and message, and concatenating them with a space, followed by a newline character. The displayed content is dynamic and changes in response to messages added using the "/add-message" path. Each time the root URL is called, the list of messages saved in the queries ArrayList is dynamically generated.
 
 ## Part 2
-![](sshkey.png)
+![](getttingsshkey.png)
 
 ### Path to the private key for your SSH key for logging into ieng6 (on your computer)
 The path to the private key is /Users/atwins/.ssh/id_rsa, as shown above.
@@ -68,26 +68,7 @@ The path to the private key is /Users/atwins/.ssh/id_rsa, as shown above.
 The path to the public key is /Users/atwins/.ssh/id_rsa.pub, as shown above.
 
 ### Terminal interaction where you log into ieng6 with your course-specific account without being asked for a password
-```
-atwins@MacBook-Air-8 ~ % ssh cs15lfa23oi@ieng6.ucsd.edu                                                     
-Last login: Thu Oct 19 23:13:18 2023 from 128.54.149.96
-quota: Cannot resolve mountpoint path /home/linux/dsmlp/.snapshot/daily.2023-09-19_0010: Stale file handle
-quota: Cannot resolve mountpoint path /home/linux/dsmlp/.snapshot/daily.2023-10-01_0010: Stale file handle
-quota: Cannot resolve mountpoint path /home/linux/dsmlp/.snapshot/hourly.2023-09-29_2001: Stale file handle
-Hello cs15lfa23oi, you are currently logged into ieng6-203.ucsd.edu
-
-You are using 0% CPU on this system
-
-Cluster Status 
-Hostname     Time    #Users  Load  Averages  
-ieng6-201   23:15:01   2  2.41,  2.22,  1.61
-ieng6-202   23:15:01   7  0.70,  0.40,  0.27
-ieng6-203   23:15:01   5  4.29,  4.19,  3.82
-
- 
-Thu Oct 19, 2023 11:16pm - Prepping cs15lfa23
-[cs15lfa23oi@ieng6-203]:~:32$ 
-```
+![](terminalinteraction.png)
 
 ## Part 3
 Something that I learned during weeks 2 and 3, that I did not know before, was about the components of URLs. I now understand how web addresses are structured with domain names, paths, query parameters, and fragment identifiers and how to use handlers to interact with them. In addition, I learned about Secure Shell (SSH) protocol, which allows secure access to servers on different computers over a network. While I did know that servers can be accessed remotely, I did not know how to do it, this can be beneficial in remote collaboration and server management. 
