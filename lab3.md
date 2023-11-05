@@ -380,7 +380,7 @@ atwins@MacBook-Air-9 cse15l-docsearch % grep -c -e "Boone" -e "Schroeder" techni
 13
 ```
 
-A lot of the terminal outputs were reduced, in order to not make this documane too long.
+A lot of the terminal outputs were reduced, in order to not make this document too long.
 #### Citations
 - https://www.freecodecamp.org/news/grep-command-in-linux-usage-options-and-syntax-examples/
 - https://man7.org/linux/man-pages/man1/grep.1.html
