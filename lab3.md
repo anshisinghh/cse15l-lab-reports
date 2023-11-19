@@ -2,77 +2,84 @@
 
 ## Part 1 - Bugs
 
-My program is the Selection Sort algorithm, it takes in an array of integers and outputs the array sorted in increasing order.
+The program I chose is the reverseInPlace and reversed methods. The reverseInPlace method takes in an input array and changes it to be in reversed order, and the reversed method takes in an input array and returns a *new* array with all the elements of the input array in reversed order.
 ```
-public class SelectionSort {
-    static void selectionSort(int[] arr) {
-        for (int i = 0; i < arr.length; i += 1) {
-            int minIndex = i;
-            for (int j = i; j < arr.length; j += 1) {
-                if (arr[j] < arr[minIndex]) {
-                    minIndex = j;
-                }
-            }
-            // Swap the minimum element with the first element
-            if (i != minIndex) {
-                arr[i] = arr[minIndex];
-                arr[minIndex] = arr[i];
-            }
-        }
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
     }
 }
-```
 
-In order to test my algorithm, I wrote some JUnit tests. I tested to see if the sorting algorithm works on an unsorted and sorted array.
-```
-@Test
-public void testSelectionSortWithUnsortedArray() {
-    int[] input = {4, 2, 7, 1, 9, 3};
-    int[] expectedOutput = {1, 2, 3, 4, 7, 9};
-    SelectionSortExamples.selectionSort(input);
-    assertArrayEquals(expectedOutput, input);
-}
-
-@Test
-public void testSelectionSortWithSortedArray() {
-    int[] input = {1, 2, 3};
-    int[] expectedOutput = {1, 2, 3};
-    SelectionSortExamples.selectionSort(input);
-    assertArrayEquals(expectedOutput, input);
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
 }
 ```
 
-However, one of these test cases do not pass. 
+In order to test the methods, I wrote some JUnit tests. I tested to see if the algorithm works on an array that is the same reversed and an array with multiple elements.
+```
+@Test
+public void testReverseInPlaceWithSameElement() {
+    int[] input1 = { 3, 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 3, 3 }, input1);
+}
+
+@Test
+public void testReverseInPlaceWithMultipleElements() {
+    int[] input1 = { 3, 2, 1 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 1, 2, 3 }, input1);
+}
+
+@Test
+public void testReversedWithSameElement() {
+    int[] input1 = { 3, 3 };
+    assertArrayEquals(new int[]{ 3, 3 }, ArrayExamples.reversed(input1));
+}
+
+@Test
+  public void testReversedWithMultipleElements() {
+    int[] input1 = { 3, 2, 1 };
+    assertArrayEquals(new int[]{ 1, 2, 3 }, ArrayExamples.reversed(input1));
+}
+```
+
+However, three of these test cases do not pass. 
 ![](testingSelectionSort.png)
 
-The symptom that is occuring is that testSelectionSortWithUnsortedArray test case passes successfully without any errors, but testSelectionSortWithSortedArray test case does not pass.
+The symptom that is occurring is that the testReverseInPlaceWithSameElement test case passes successfully without any errors, but the testReverseInPlaceWithMultipleElements, testReversedWithSameElement, and testReversedWithMultipleElements test cases do not pass.
 
-The bug in the SelectionSort method was due to incorrect swapping logic. After selecting the index of the minimum index, you swap the minimum element with the element at the current index i, if they are not the same. Thus, we replace the value of the element at index i with the value of the element at the minimum index. However, we do not store the original value of element at index i, meaning that it is being overridden. This means that incorrect elements are being swapped, leading to unexpected behavior.
+The bug in the reverseInPlace method was due to incorrect swapping logic. The error was that we are iterating through the array and assigning the last element to the first, the second-to-last element to the second, etc. However, we are not storing the original value of the first, second, etc. elements, which means we lose those values. As a result, when we get to the second half of the array, it is not being reversed correctly. 
+The bug in the reversed method was due to incorrect assignment. The reversed values were not being saved into the new array; rather, the reversed elements were being updated into the original array from the new array, which was empty. In addition, it was returning the original array not the new array.
 
-In order to fix this, I created a temp variable that stored the orignal value of the element at index i, before swapping. Thus, when we reassign the element at minIndex to the element at i, we can do so with the temp variable. This ensures no elements are lost and the correct swapping occurs and the bug is fixed. Here is the corrected version of the code.
+In order to fix the reverseInPlace method, I created a temp variable that I saved the value of the first element so that after assigning the last element to the first element, we can assign the value of the temp to the last element, and so on. In addition, the loop should stop after half the list has been iterated through since we already swapped the second half of the list while swapping the first half. This ensures no elements are lost, the correct swapping occurs, and the bug is fixed. 
+In order to fix the reversed method, I assigned the new array to get the updated value and returned a new array instead of the original array. This ensures that the correct array is being updated and returned; thus, the bug is fixed.
+Here is the corrected version of the code.
 ```
-public class SelectionSort {
-    static void selectionSort(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            int minIndex = i;
-            for (int j = i; j < arr.length; j++) {
-                if (arr[j] < arr[minIndex]) {
-                    minIndex = j;
-                }
-            }
-            // Swap the minimum element with the first element
-            if (i != minIndex) {
-                int temp = arr[i];
-                arr[i] = arr[minIndex];
-                arr[minIndex] = temp;
-            }
-        }
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i += 1) {
+      int temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
     }
+}
+
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
 }
 ```
 
 The JUnit tests pass as well.
-![](testingCorrectSelectionSort.png)
+![](testingCorrectReverse.png)
+
 
 ## Part 2 - Researching Commands
 
