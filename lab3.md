@@ -49,7 +49,7 @@ public void testReversedWithSameElement() {
 ```
 
 However, three of these test cases do not pass. 
-![](testingSelectionSort.png)
+![](testingReverse.png)
 
 The symptom that is occurring is that the testReverseInPlaceWithSameElement test case passes successfully without any errors, but the testReverseInPlaceWithMultipleElements, testReversedWithSameElement, and testReversedWithMultipleElements test cases do not pass.
 
