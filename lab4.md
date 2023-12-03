@@ -23,5 +23,7 @@ Keys pressed: ```<up><up><up><up><up><up><enter>```, ```<up><up><up><up><up><ent
 ![](step8.png)
 
 ## Commit and push the resulting change to your Github account (you can pick any commit message!)
-![](step9.png)
 In order to commit and push the wrestling change to my Github account, I used the ```git add ListExamples.java``` command and pressed the ```enter``` key. The git add command adds a change in the ListExamples.java file to the staging area. Then, I typed the command ```git commit```, which records changes to the repository. In order to commit a change, you need to insert a commit message, after typing the command, a Vim editor opens up I pressed ```<i>``` to insert a message and wrote the message “Fixed error, changed index1 to index2” which I saved using the command ```<:wq>```. Thus, the changes are now recorded with the error message. So then, I typed the command ```git push``` and then ```enter``` in my terminal, which updates those changes in my Github repository.
+![](step9.png)
+
+
