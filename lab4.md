@@ -14,7 +14,7 @@ In order to run the tests, I had to navigate into the project directory using th
 
 ## Edit the code file to fix the failing test
 In order to access the code file, in the terminal, I ran the command ```vim ListExamples.java```, and then ```enter```.
-Keys pressed: ```</index1><enter>``` This command found the first instance of “index1” and then to navigate to the one we want to change, I used the n and l keys, ```<n><n><n><n><n><n><n><n><n><l><l><l><l><l>```. After having your cursor on the 1, in order to delete the 1, press ```<x>``` and insert a 2 instead, ```<i><2><esc>```. Then save and exit from vim using ```<:wq>```.
+Keys pressed: ```</index1><enter>``` This command found the first instance of “index1” and then to navigate to the one we want to change, I used the n and l keys, ```<n><n><n><n><n><n><n><n><n><l><l><l><l><l>```. After having your cursor on the 1, in order to delete the 1, press ```x``` and insert a 2 instead, ```<i><2><esc>```. Then save and exit from vim using ```:wq```.
 ![](step7.png)
 
 ## Run the tests, demonstrating that they now succeed
@@ -23,7 +23,5 @@ Keys pressed: ```<up><up><up><up><up><up><enter>```, ```<up><up><up><up><up><ent
 ![](step8.png)
 
 ## Commit and push the resulting change to your Github account (you can pick any commit message!)
-In order to commit and push the wrestling change to my Github account, I used the ```git add ListExamples.java``` command and pressed the ```enter``` key. The git add command adds a change in the ListExamples.java file to the staging area. Then, I typed the command ```git commit```, which records changes to the repository. In order to commit a change, you need to insert a commit message, after typing the command, a Vim editor opens up I pressed ```<i>``` to insert a message and wrote the message “Fixed error, changed index1 to index2” which I saved using the command ```<:wq>```. Thus, the changes are now recorded with the error message. So then, I typed the command ```git push``` and then ```enter``` in my terminal, which updates those changes in my Github repository.
+In order to commit and push the wrestling change to my Github account, I used the ```git add ListExamples.java``` command and pressed the ```enter``` key. The git add command adds a change in the ListExamples.java file to the staging area. Then, I typed the command ```git commit```, which records changes to the repository. In order to commit a change, you need to insert a commit message, after typing the command, a Vim editor opens up I pressed ```i``` to insert a message and wrote the message “Fixed error, changed index1 to index2” which I saved using the command ```:wq```. Thus, the changes are now recorded with the error message. So then, I typed the command ```git push``` and then ```enter``` in my terminal, which updates those changes in my Github repository.
 ![](step9.png)
-
-
